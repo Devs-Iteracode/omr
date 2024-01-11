@@ -40,6 +40,14 @@ class ImagickScanner extends Scanner
             $this->imagick->setImageCompressionQuality(100);
             $this->imagick->blackThresholdImage("#FFFFFF");
             $this->imagick->whiteThresholdImage("#000000");
+
+            $this->imagick->quantizeImage(
+                2,                        // Number of colors
+                Imagick::COLORSPACE_GRAY, // Colorspace
+                1,                        // Depth tree
+                TRUE,                     // Dither
+                FALSE
+            );
         }
 
         return $this->imagick;
