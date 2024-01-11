@@ -37,7 +37,7 @@ class ScanCommand extends Command
             );
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $imagePath = $input->getArgument('imageJPG');
         $mapJsonPath = $input->getArgument('mapJSON');
@@ -63,6 +63,8 @@ class ScanCommand extends Command
         $io = new SymfonyStyle($input, $output);
 
         $io->table(['id', 'marked'], $result->toArray()['targets']);
+
+        return Command::SUCCESS;
     }
 
 
