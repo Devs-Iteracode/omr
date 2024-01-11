@@ -38,8 +38,6 @@ class ImagickScanner extends Scanner
             $this->imagick->medianFilterImage(2);
             $this->imagick->setImageCompression(imagick::COMPRESSION_JPEG);
             $this->imagick->setImageCompressionQuality(100);
-            $this->imagick->blackThresholdImage("#FFFFFF");
-            $this->imagick->whiteThresholdImage("#000000");
 
             $this->imagick->quantizeImage(
                 2,                        // Number of colors
@@ -48,6 +46,9 @@ class ImagickScanner extends Scanner
                 TRUE,                     // Dither
                 FALSE
             );
+
+            $this->imagick->blackThresholdImage("#FFFFFF");
+            $this->imagick->whiteThresholdImage("#000000");
         }
 
         return $this->imagick;
