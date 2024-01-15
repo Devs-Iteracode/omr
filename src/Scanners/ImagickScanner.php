@@ -81,7 +81,7 @@ class ImagickScanner extends Scanner
         $this->draw->setStrokeColor("#00CC00");
         $this->draw->rectangle($first->getX(), $first->getY(), $last->getX(), $last->getY());
 
-        for($y = $first->getY(); $y != $last->getY(); $y++)
+        /*for($y = $first->getY(); $y != $last->getY(); $y++)
         {
             for($x = $first->getX(); $x != $last->getX(); $x++)
             {
@@ -96,7 +96,7 @@ class ImagickScanner extends Scanner
                         $point->setY($y);
                 }
             }
-        }
+        }*/
 
         //Debug draw
         $this->draw->circle($point->getX(), $point->getY(), $point->getX() + 2, $point->getY());
@@ -131,7 +131,7 @@ class ImagickScanner extends Scanner
         $this->draw->setStrokeColor("#00CC00");
         $this->draw->rectangle($first->getX(), $first->getY(), $last->getX(), $last->getY());
 
-        for($y = $first->getY(); $y != $last->getY(); $y++)
+        /*for($y = $first->getY(); $y != $last->getY(); $y++)
         {
             for($x = $first->getX(); $x != $last->getX(); $x++)
             {
@@ -146,7 +146,7 @@ class ImagickScanner extends Scanner
                         $point->setY($y);
                 }
             }
-        }
+        }*/
 
         //Debug draw
         $this->draw->circle($point->getX(), $point->getY(), $point->getX() + 2, $point->getY());
